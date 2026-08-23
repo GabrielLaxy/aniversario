@@ -8,13 +8,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Um presente especial',
     description: 'Uma surpresa feita com amor, só para você.',
-    images: ['/og.png'],
+    images: ['/og.jpg'],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Um presente especial',
     description: 'Uma surpresa feita com amor, só para você.',
-    images: ['/og.png'],
+    images: ['/og.jpg'],
   },
 };
 
