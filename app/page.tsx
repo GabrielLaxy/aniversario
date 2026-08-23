@@ -15,6 +15,7 @@ const confetti = Array.from({ length: 20 }, (_, index) => ({
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
 
   return (
     <main className={`surprise-scene ${isOpen ? 'is-open' : ''}`}>
@@ -27,11 +28,13 @@ export default function Home() {
       </div>
 
       <header className="intro">
-        <p className="eyebrow">PARA UMA PESSOA MUITO ESPECIAL</p>
-        <h1>{isOpen ? 'Surpresa!' : 'Tem um presente para você'}</h1>
-        <p className="subtitle" aria-live="polite">
-          {isOpen ? 'Prepare o coração. Esse momento é todinho seu.' : 'Toque na caixa para descobrir o que tem dentro.'}
-        </p>
+        {isOpen ? (
+          <h1 className="wish-message" aria-live="polite">
+            Espero que essa seja 1 de muitos sonhos que vamos realizar juntos
+          </h1>
+        ) : (
+          <p className="subtitle">Toque na caixa para descobrir o que tem dentro.</p>
+        )}
       </header>
 
       <section className="stage" aria-label="Presente surpresa">
@@ -44,7 +47,7 @@ export default function Home() {
 
         <div className="ticket-wrap">
           <div className="ticket-glow" aria-hidden="true" />
-          <img src="/bts-ticket.png" alt="Ingresso BTS World Tour 2026, live in concert" className="ticket" />
+          <img src={`${basePath}/bts-ticket.png`} alt="Ingresso BTS World Tour 2026, live in concert" className="ticket" />
         </div>
 
         <button className="gift" type="button" aria-label={isOpen ? 'Presente aberto' : 'Abrir o presente'} aria-expanded={isOpen} onClick={() => setIsOpen(true)} disabled={isOpen}>

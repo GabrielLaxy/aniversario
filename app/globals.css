@@ -21,6 +21,7 @@ button, img { -webkit-tap-highlight-color: transparent; }
 .intro { z-index: 2; width: min(720px, calc(100% - 40px)); margin: 0 auto; padding-top: clamp(42px, 7vh, 80px); text-align: center; }
 .eyebrow { margin: 0 0 14px; color: #f5bfdc; font-size: clamp(.62rem, 1.4vw, .78rem); font-weight: 750; letter-spacing: .28em; }
 h1 { margin: 0; font-size: clamp(2rem, 5.5vw, 4.7rem); font-weight: 760; letter-spacing: -.045em; line-height: .98; text-wrap: balance; text-shadow: 0 6px 30px rgba(232,138,255,.2); }
+.wish-message { font-size: clamp(1.7rem, 4.6vw, 3.65rem); line-height: 1.08; }
 .subtitle { margin: 16px auto 0; color: #cbbfe2; font-size: clamp(.9rem, 2vw, 1.05rem); line-height: 1.5; }
 
 .stage { position: relative; z-index: 1; align-self: center; justify-self: center; width: min(820px, 100%); height: clamp(390px, 54vh, 570px); perspective: 1000px; }
