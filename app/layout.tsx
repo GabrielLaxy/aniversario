@@ -15,6 +15,18 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: 'Um presente especial',
   description: 'Uma surpresa feita com amor, só para você.',
+  metadataBase: new URL('https://presente-especial-bts.gabriellaxy.chatgpt.site'),
+  openGraph: {
+    title: 'Um presente especial',
+    description: 'Uma surpresa feita com amor, só para você.',
+    images: ['/og.png'],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Um presente especial',
+    description: 'Uma surpresa feita com amor, só para você.',
+    images: ['/og.png'],
+  },
 };
 
 export default function RootLayout({
